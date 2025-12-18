@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eduardoalvessales.github.io/TREND-/sitemap.xml
