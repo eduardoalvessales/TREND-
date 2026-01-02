@@ -1,500 +1,89 @@
-# TREND-
-Site de venda de produtos e serviços 
-<!-- index.html - TENDENCIA (single-file prototype) -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
- <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TREND – Tendências, Produtos em Alta e Oportunidades Online</title>
+  <title>TREND – Tendências, Produtos e Oportunidades</title>
 
-  <meta name="description" content="Descubra tendências do momento, produtos em alta, serviços digitais e oportunidades online. O TREND mostra o que está viralizando antes de todo mundo.">
-
-  <meta name="keywords" content="tendências, produtos em alta, novidades, oportunidades online, afiliados, lançamentos, trend">
-
+  <meta name="description" content="Descubra tendências, produtos em alta e oportunidades digitais. O TREND mostra o que está crescendo antes de virar moda.">
+  <meta name="keywords" content="tendências, produtos em alta, oportunidades online, negócios digitais">
   <meta name="author" content="TREND">
-
   <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://eduardoalvessales.github.io/TREND/">
 
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="cNKjXDG_mEUcacbgJj2m4pr4pd9Ur2iUkzLDoHgjl6M" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="TREND – Tendências e Produtos em Alta">
-  <meta property="og:description" content="Veja tendências do momento, produtos virais e oportunidades online antes de todo mundo.">
+  <meta property="og:description" content="Descubra tendências e oportunidades que estão crescendo agora.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://eduardoalvessales.github.io/TREND/">
-  <meta property="og:image" content="https://eduardoalvessales.github.io/TREND/assets/og-image.jpg">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TREND – Tendências e Produtos em Alta">
-  <meta name="twitter:description" content="Descubra tendências, produtos e oportunidades online.">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --text:#f5f5f5;
+      --accent:#00d1b2;
+      --card:#151515;
+    }
+    *{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);}
+    header{padding:20px;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center}
+    header h1{margin:0;font-size:22px}
+    nav a{color:var(--text);margin-left:15px;text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+    main{padding:30px;max-width:1100px;margin:auto}
+    .hero{background:#121212;padding:30px;border-radius:14px;margin-bottom:30px}
+    .hero h2{margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .card a{color:var(--accent);text-decoration:none;font-weight:600}
+    footer{text-align:center;padding:25px;opacity:.6}
+  </style>
 </head>
-<title>TENDÊNCIA — Você ainda não viu?</title>
-<style>
-  :root{
-    --bg:#0b0b0b; --text:#f5f5f5; --accent:#00d1b2;
-    --card-bg:#111; --glass: rgba(255,255,255,0.03);
-  }
-  *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;}
-  body{margin:0;background:var(--bg);color:var(--text);min-height:100vh;}
-  header{display:flex;align-items:center;gap:16px;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,0.04)}
-  header img.logo{height:56px; width:auto; border-radius:6px; background:#081;}
-  .brand{display:flex;flex-direction:column;}
-  .brand h1{margin:0;font-size:18px;letter-spacing:1px}
-  .brand small{opacity:0.7}
-  nav.menu{margin-left:auto;display:flex;gap:10px;align-items:center}
-  nav.menu button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--text);cursor:pointer}
-  nav.menu button.cta{background:var(--accent);color:#021; font-weight:700;border:none}
-  .container{padding:20px;display:grid;grid-template-columns:300px 1fr;gap:20px}
-  aside.side{background:var(--card-bg);padding:14px;border-radius:12px;min-height:60vh}
-  aside.category{display:flex;flex-direction:column;gap:10px}
-  aside .cat-btn{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
-  main.view{min-height:80vh}
-  .hero{background:linear-gradient(120deg,rgba(255,255,255,0.02),rgba(0,0,0,0.35));padding:18px;border-radius:12px;margin-bottom:18px;display:flex;gap:20px;align-items:center}
-  .hero .cover{flex:1;padding:12px}
-  .hero .summary{min-width:280px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-  .card{background:var(--glass);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-  .card h3{margin:6px 0}
-  footer{padding:18px;text-align:center;opacity:0.7}
-  /* category color themes */
-  .theme-esporte{--accent:#1db954}
-  .theme-moda{--accent:#ff6b6b}
-  .theme-musica{--accent:#6b5bff}
-  .theme-cinema{--accent:#f7b731}
-  .theme-vi<img width="828" height="1792" alt="IMG_4339" src="https://github.com/user-attachments/assets/0f17f91f-cbce-474d-bba9-c45e38460aee" />
-ral{--accent:#00d1ff}
-  /* cart modal */
-  .cart-btn{position:relative}
-  .cart-count{position:absolute;top:-6px;right:-6px;background:#ff3b30;color:#fff;border-radius:50%;padding:4px 7px;font-size:12px}
-  /* small helpers */
-  .muted{opacity:0.7;font-size:13px}
-  .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)}
-  .admin-badge{background:#fff;color:#000;padding:4px 8px;border-radius:6px;font-weight:700}
-  /* responsive */
-  @media (max-width:900px){.container{grid-template-columns:1fr;}.side{order:2}}
-</style>
-</head>
+
 <body>
-<a href="tendencias-2026.html">🔥 Tendências 2026</a>
-<header>
-  <img src="assets/logo.png" alt="logo" class="logo" id="logoImg" />
-  <div class="brand">
-    <h1>TENDÊNCIA</h1>
-    <small>Você ainda não viu?</small>
-  </div>
 
-  <nav class="menu" id="topMenu">
-    <button data-nav="home">Início</button>
-    <button data-nav="explorar">Explorar</button>
-    <button data-nav="afiliados">Afiliados</button>
-    <button data-nav="fornecedores">Fornecedores</button>
-    <button class="cta" id="btnCreate">Descobrir</button>
-    <button class="cart-btn" id="openCart">Carrinho <span class="cart-count" id="cartCount">0</span></button>
-    <button id="btnLogin">Entrar</button>
+<header>
+  <h1>TREND</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="tendencias-2026.html">Tendências 2026</a>
   </nav>
 </header>
 
-<div class="container" id="app">
-  <aside class="side" id="sideBar">
-    <div class="category">
-      <h3>Categorias</h3>
-      <div class="cat-btn theme-esporte" data-cat="esporte">🏈 Esporte</div>
-      <div class="cat-btn theme-moda" data-cat="moda">👗 Moda</div>
-      <div class="cat-btn theme-musica" data-cat="musica">🎵 Música</div>
-      <div class="cat-btn theme-cinema" data-cat="cinema">🎬 Cinema</div>
-      <div class="cat-btn theme-viral" data-cat="viral">🔥 Viral</div>
-      <hr />
-      <div class="muted">Organizar por:</div>
-      <select id="sortSelect" style="margin-top:8px;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)">
-        <option value="trending">Mais vistos</option>
-        <option value="margin_desc">Maior margem</option>
-        <option value="price_asc">Preço (menor)</option>
-        <option value="price_desc">Preço (maior)</option>
-      </select>
-      <hr />
-      <div>
-        <h4>Admin</h4>
-        <div id="adminArea" class="muted">Acessar funções restritas</div>
-      </div>
+<main>
+  <section class="hero">
+    <h2>O que está crescendo agora</h2>
+    <p>
+      O TREND mostra tendências, produtos e oportunidades digitais antes de virarem moda.
+      Descubra o que está chamando atenção em 2026.
+    </p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>🔥 Tendências 2026</h3>
+      <p>Veja as principais tendências que estão ganhando força agora.</p>
+      <a href="tendencias-2026.html">Acessar →</a>
     </div>
-  </aside>
 
-  <main class="view" id="view">
-    <!-- dynamic view here -->
-  </main>
-</div>
-
-<!-- cart modal simplified -->
-<div id="cartModal" style="display:none;position:fixed;right:18px;bottom:18px;background:var(--card-bg);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);width:360px;box-shadow:0 10px 30px rgba(0,0,0,0.6)">
-  <h3>Carrinho</h3>
-  <div id="cartItems" style="max-height:300px;overflow:auto;margin-bottom:10px"></div>
-  <div class="muted" id="cartTotal">Total: R$ 0,00</div>
-  <div style="display:flex;gap:8px;margin-top:10px">
-    <button id="btnCheckout" class="cta">Finalizar</button>
-    <button id="btnCloseCart">Fechar</button>
-  </div>
-</div>
-
-<!-- simple login modal -->
-<div id="loginModal" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--card-bg);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);width:320px">
-  <h3>Entrar</h3>
-  <div style="display:flex;flex-direction:column;gap:8px">
-    <input id="inpUser" placeholder="usuário" />
-    <input id="inpPass" type="password" placeholder="senha" />
-    <small class="muted">Contas de teste: admin / admin123  •  membro1 / mem1  •  membro2 / mem2</small>
-    <div style="display:flex;gap:8px;margin-top:8px">
-      <button id="btnDoLogin" class="cta">Entrar</button>
-      <button id="btnCloseLogin">Cancelar</button>
+    <div class="card">
+      <h3>🛍️ Produtos em Alta</h3>
+      <p>Produtos que estão vendendo e crescendo rapidamente.</p>
+      <a href="#">Em breve</a>
     </div>
-  </div>
-</div>
+
+    <div class="card">
+      <h3>💻 Serviços Digitais</h3>
+      <p>Serviços online, ferramentas e oportunidades digitais.</p>
+      <a href="#">Em breve</a>
+    </div>
+  </section>
+</main>
 
 <footer>
-  © TENDÊNCIA — Hub de tendências • <span class="pill">Slogan: Você ainda não viu?</span>
+  © 2026 TREND — Todos os direitos reservados.
 </footer>
 
-<script>
-/* --------------------------
- - Dados iniciais (exemplo)
----------------------------*/
-const sampleProducts = [
-  { id: 'p1', title:'Tênis Runner X', category:'esporte', price:299.9, margin:0.35, vendor:'forn1', type:'fisico', img:'', trending:120 },
-  { id: 'p2', title:'Camiseta Street', category:'moda', price:79.9, margin:0.5, vendor:'forn2', type:'fisico', img:'', trending:90 },
-  { id: 'p3', title:'Curso Beatmaking', category:'musica', price:129.9, margin:0.8, vendor:'inf1', type:'digital', img:'', trending:60 },
-  { id: 'p4', title:'Coleção Filme Cult', category:'cinema', price:49.9, margin:0.45, vendor:'forn3', type:'fisico', img:'', trending:40 },
-  { id: 'p5', title:'Pack Viral Clips', category:'viral', price:19.9, margin:0.6, vendor:'inf2', type:'digital', img:'', trending:200 }
-];
-
-/* ---------- App state ---------- */
-let state = {
-  user: null, // {username,role: 'admin'|'member'}
-  products: JSON.parse(localStorage.getItem('tend_products')) || sampleProducts,
-  cart: JSON.parse(localStorage.getItem('tend_cart')) || [],
-  category: 'all',
-  sort: 'trending'
-};
-
-/* ---------- Util ---------- */
-function currency(v){ return 'R$ ' + v.toFixed(2).replace('.',','); }
-function save(){ localStorage.setItem('tend_products', JSON.stringify(state.products)); localStorage.setItem('tend_cart', JSON.stringify(state.cart)); }
-
-/* ---------- Render main views ---------- */
-const view = document.getElementById('view');
-function renderHome(){
-  const html = `
-    <div class="hero theme-esporte">
-      <div class="cover">
-        <h2>As tendências do dia</h2>
-        <p class="muted">Um resumo rápido das maiores tendências nas categorias que você ama.</p>
-        <div style="display:flex;gap:8px;margin-top:12px">
-          <button class="cta" onclick="goExplorar()">Explorar tendências</button>
-          <button onclick="goAfiliados()">Quero anunciar</button>
-        </div>
-      </div>
-      <div class="summary">
-        <h3>Top viral</h3>
-        <div class="card">
-          <h4>Pack Viral Clips</h4>
-          <div class="muted">R$ 19,90 • +200 views</div>
-        </div>
-      </div>
-    </div>
-    <h3>Novidades selecionadas</h3>
-    <div class="grid" id="gridProducts"></div>
-  `;
-  view.innerHTML = html;
-  renderProductsGrid();
-}
-
-function renderProductsGrid(){
-  const grid = document.getElementById('gridProducts');
-  let prods = state.products.slice();
-  // filter
-  if(state.category !== 'all') prods = prods.filter(p => p.category === state.category);
-  // sort
-  if(state.sort === 'trending') prods.sort((a,b)=>b.trending-a.trending);
-  else if(state.sort === 'margin_desc') prods.sort((a,b)=>b.margin-b.margin);
-  else if(state.sort === 'price_asc') prods.sort((a,b)=>a.price-b.price);
-  else if(state.sort === 'price_desc') prods.sort((a,b)=>b.price-a.price);
-
-  grid.innerHTML = prods.map(p=>`
-    <div class="card">
-      <div style="height:120px;background:linear-gradient(45deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2));display:flex;align-items:center;justify-content:center;border-radius:8px">
-        <strong style="font-size:20px">${p.type==='digital'?'📦':'🛍️'}</strong>
-      </div>
-      <h3>${p.title}</h3>
-      <div class="muted">${p.category} • ${p.vendor}</div>
-      <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center">
-        <div><strong>${currency(p.price)}</strong><div class="muted">margem ${(p.margin*100|0)}%</div></div>
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <button onclick="openProduct('${p.id}')" style="padding:8px;border-radius:8px">Ver</button>
-          <button onclick="addToCart('${p.id}')" style="padding:8px;border-radius:8px;background:var(--accent);color:#021">Adicionar</button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-/* product detail */
-function openProduct(id){
-  const p = state.products.find(x=>x.id===id);
-  view.innerHTML = `
-    <div class="hero theme-${p.category}">
-      <div class="cover">
-        <h2>${p.title}</h2>
-        <p class="muted">${p.category} • ${p.vendor}</p>
-        <p style="margin-top:12px"><strong>${currency(p.price)}</strong> <span class="muted">• margem ${(p.margin*100|0)}%</span></p>
-        <div style="margin-top:12px">
-          <button class="cta" onclick="addToCart('${p.id}')">Comprar</button>
-          <button onclick="goExplorar()">Voltar</button>
-        </div>
-      </div>
-      <div class="summary">
-        <h4>Sobre</h4>
-        <p class="muted">Descrição breve do produto / serviço. Lorem ipsum para preencher.</p>
-      </div>
-    </div>
-    <h3>Produtos relacionados</h3>
-    <div class="grid" id="relatedGrid"></div>
-  `;
-  const related = state.products.filter(x=>x.category === p.category && x.id!==p.id).slice(0,4);
-  setTimeout(()=> {
-    const rg = document.getElementById('relatedGrid');
-    rg.innerHTML = related.map(r=>`<div class="card"><h4>${r.title}</h4><div class="muted">${currency(r.price)}</div></div>`).join('');
-  },50)
-}
-
-/* explorar / profundidade */
-function goExplorar(){
-  state.category = 'all';
-  view.innerHTML = `<h2>Explorar</h2><div class="grid" id="gridProducts"></div>`;
-  renderProductsGrid();
-}
-
-/* afiliados (espaco para cadastros) */
-function goAfiliados(){
-  view.innerHTML = `
-    <h2>Afiliados & Divulgação</h2>
-    <div class="card">
-      <p class="muted">Espaço para afiliados cadastrarem links, campanhas e metas. Sistema de comissão por produto (configurável).</p>
-      <button onclick="renderAffiliateForm()">Quero ser afiliado</button>
-    </div>
-    <h3>Campanhas ativas</h3>
-    <div id="campanhas" class="grid"></div>
-  `;
-  document.getElementById('campanhas').innerHTML = state.products.filter(p=>p.type==='fisico').map(p=>`<div class="card"><h4>${p.title}</h4><div class="muted">Comissão sugerida: ${(p.margin*50|0)}%</div></div>`).join('');
-}
-
-function renderAffiliateForm(){
-  view.innerHTML = `<h3>Cadastro de Afiliado</h3>
-  <div class="card"><input placeholder="Nome/Usuário" id="affName"/><input placeholder="Link ou PayPal / Pix" id="affLink" style="margin-top:8px"/><div style="margin-top:10px"><button onclick="submitAff()">Enviar</button></div></div>`;
-}
-function submitAff(){ alert('Pedido de afiliado enviado! Em produção, criaremos fluxo de aprovação.'); }
-
-/* fornecedores */
-function goFornecedores(){
-  view.innerHTML = `<h2>Fornecedores</h2>
-  <div class="card">
-    <p class="muted">Conectar fornecedores via CSV/JSON ou API. (Exemplo: enviar arquivo CSV com colunas: id,title,price,margin,category,vendor,type)</p>
-    <input type="file" id="csvUpload"/>
-    <div style="margin-top:10px"><button onclick="importCSV()">Importar CSV</button></div>
-  </div>
-  <h3>Fornecedores conectados</h3>
-  <div id="fornList" class="grid"></div>`;
-  document.getElementById('fornList').innerHTML = [...new Set(state.products.map(p=>p.vendor))].map(v=>`<div class="card"><strong>${v}</strong><div class="muted">Produtos: ${state.products.filter(p=>p.vendor===v).length}</div></div>`).join('');
-}
-
-/* importar CSV (simples) */
-function importCSV(){
-  const f = document.getElementById('csvUpload').files[0];
-  if(!f){ alert('Selecione um CSV'); return; }
-  const reader = new FileReader();
-  reader.onload = e=>{
-    const txt = e.target.result;
-    const rows = txt.split('\\n').map(r=>r.split(','));
-    // header expected: id,title,price,margin,category,vendor,type
-    const header = rows.shift().map(h=>h.trim());
-    rows.forEach(r=>{
-      if(r.length < 6) return;
-      const obj = {};
-      header.forEach((h,i)=> obj[h]=r[i]?.trim());
-      // coerce
-      const np = { id: obj.id || ('p'+Date.now()), title: obj.title||'Sem nome', price: parseFloat(obj.price)||9.9, margin: parseFloat(obj.margin)||0.3, category: obj.category||'viral', vendor: obj.vendor||'fornecedor', type: obj.type||'fisico', trending:0 }
-      state.products.push(np);
-    });
-    save();
-    alert('Importado! Atualize a página se necessário.');
-  }
-  reader.readAsText(f);
-}
-
-/* cart */
-function addToCart(id){
-  const p = state.products.find(x=>x.id===id);
-  if(!p) return;
-  state.cart.push({...p, cartId: 'c'+Date.now()});
-  save(); renderCartCount();
-  alert('Adicionado ao carrinho');
-}
-function renderCartCount(){ document.getElementById('cartCount').innerText = state.cart.length; }
-document.getElementById('openCart').addEventListener('click', ()=> {
-  document.getElementById('cartModal').style.display = 'block';
-  renderCartModal();
-});
-document.getElementById('btnCloseCart').addEventListener('click', ()=> document.getElementById('cartModal').style.display='none');
-
-function renderCartModal(){
-  const el = document.getElementById('cartItems');
-  if(state.cart.length===0){ el.innerHTML = '<div class="muted">Carrinho vazio</div>'; document.getElementById('cartTotal').innerText='Total: R$ 0,00'; return; }
-  el.innerHTML = state.cart.map(i=>`<div style="display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.02)"><div><strong>${i.title}</strong><div class="muted">${i.type} • ${currency(i.price)}</div></div><div><button onclick="removeCart('${i.cartId}')">Remover</button></div></div>`).join('');
-  const total = state.cart.reduce((s,c)=>s + c.price,0);
-  document.getElementById('cartTotal').innerText = 'Total: ' + currency(total);
-}
-function removeCart(cartId){ state.cart = state.cart.filter(c=>c.cartId!==cartId); save(); renderCartModal(); renderCartCount(); }
-
-/* checkout (simulado com opções) */
-document.getElementById('btnCheckout').addEventListener('click', ()=> {
-  if(state.cart.length===0){ alert('Carrinho vazio'); return; }
-  // abrir checkout page
-  view.innerHTML = `<h2>Checkout</h2>
-  <div class="card"><h3>Seu pedido</h3><div id="orderList"></div><div class="muted" id="orderTotal"></div>
-  <h4>Escolha a forma de pagamento</h4>
-  <div style="display:flex;gap:8px;margin-top:8px">
-    <button onclick="pay('mercadopago')">MercadoPago</button>
-    <button onclick="pay('picpay')">PicPay</button>
-    <button onclick="pay('pix')">PIX</button>
-    <button onclick="pay('card')">Cartão (via gateway)</button>
-  </div>
-  </div>`;
-  document.getElementById('orderList').innerHTML = state.cart.map(i=>`<div class="muted">${i.title} — ${currency(i.price)}</div>`).join('');
-  document.getElementById('orderTotal').innerText = 'Total: ' + currency(state.cart.reduce((s,c)=>s+c.price,0));
-});
-
-/* pay handler - placeholders: in real app, call backend to create payment preference and redirect */
-function pay(method){
-  const total = state.cart.reduce((s,c)=>s+c.price,0);
-  if(method==='mercadopago'){
-    alert('Redirecionando para MercadoPago (exemplo). Em produção, você chamará seu backend que cria a preferência e retorna o URL de checkout.');
-    // Example: fetch('/api/create_preference', {method:'POST', body:JSON.stringify({cart:state.cart})}).then(...)
-  } else if(method==='picpay'){
-    alert('PicPay: precisa de integração com API do PicPay no backend. Aqui simulamos.');
-  } else if(method==='pix'){
-    alert('PIX: em produção, backend gera QR Code e retorna para o cliente; aqui mostramos simulação.');
-  } else {
-    alert('Cartão: use um gateway (MercadoPago, Stripe, PagSeguro). É necessário backend para tokens seguros.');
-  }
-}
-
-/* navigation & events */
-function goFornecedoresLink(){ goFornecedores(); }
-
-document.querySelectorAll('nav.menu button[data-nav]').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    const nav = b.getAttribute('data-nav');
-    if(nav==='home') renderHome();
-    if(nav==='explorar') goExplorar();
-    if(nav==='afiliados') goAfiliados();
-    if(nav==='fornecedores') goFornecedores();
-  });
-});
-
-document.getElementById('btnCreate').addEventListener('click', ()=> {
-  // call explorar for now
-  goExplorar();
-});
-document.getElementById('sortSelect').addEventListener('change', (e)=> { state.sort = e.target.value; renderProductsGrid(); });
-document.querySelectorAll('.cat-btn').forEach(c=> c.addEventListener('click', ()=> {
-  state.category = c.getAttribute('data-cat');
-  view.innerHTML = `<h2>${c.innerText}</h2><div class="grid" id="gridProducts"></div>`;
-  renderProductsGrid();
-}));
-
-/* login & roles (simple local auth for prototype) */
-document.getElementById('btnLogin').addEventListener('click', ()=> document.getElementById('loginModal').style.display='block');
-document.getElementById('btnCloseLogin').addEventListener('click', ()=> document.getElementById('loginModal').style.display='none');
-document.getElementById('btnDoLogin').addEventListener('click', ()=>{
-  const u = document.getElementById('inpUser').value;
-  const p = document.getElementById('inpPass').value;
-  // sample credentials
-  if(u==='admin' && p==='admin123'){ state.user = {username:'admin', role:'admin'}; alert('Logado como admin'); initAfterLogin(); }
-  else if(u==='membro1' && p==='mem1'){ state.user = {username:'membro1', role:'member'}; alert('Logado como membro'); initAfterLogin(); }
-  else if(u==='membro2' && p==='mem2'){ state.user = {username:'membro2', role:'member'}; alert('Logado como membro'); initAfterLogin(); }
-  else { alert('credenciais inválidas (use as contas de teste)'); return; }
-  document.getElementById('loginModal').style.display='none';
-});
-
-function initAfterLogin(){
-  document.getElementById('adminArea').innerHTML = state.user.role==='admin'? '<span class="admin-badge">ADMIN</span> • Editor completo': '<span class="pill">MEMBRO</span>';
-  if(state.user.role==='admin') {
-    // show admin quick actions
-    document.getElementById('sideBar').insertAdjacentHTML('beforeend', `<div style="margin-top:12px"><button onclick="openAdminPanel()">Painel Admin</button></div>`);
-  }
-  document.getElementById('btnLogin').innerText = state.user.username + ' · Sair';
-  document.getElementById('btnLogin').onclick = ()=> { if(confirm('Deseja deslogar?')){ state.user=null; location.reload(); } };
-}
-
-/* admin panel (only visible to admin) */
-function openAdminPanel(){
-  if(!state.user || state.user.role!=='admin'){ alert('Apenas admin'); return; }
-  view.innerHTML = `<h2>Painel Admin</h2>
-  <div class="card">
-    <h3>Gerenciar Produtos</h3>
-    <div id="adminList"></div>
-    <div style="margin-top:8px"><button onclick="renderProductForm()">Novo produto</button></div>
-  </div>
-  <div class="card" style="margin-top:12px"><h3>Configurações</h3>
-    <div class="muted">Funções restritas: alterar logo, editar comissões, remover membro, gerar relatórios.</div>
-    <div style="margin-top:8px"><button onclick="changeLogo()">Alterar logo</button></div>
-  </div>`;
-  renderAdminList();
-}
-
-function renderAdminList(){
-  const el = document.getElementById('adminList');
-  el.innerHTML = state.products.map(p=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:8px;border-bottom:1px solid rgba(255,255,255,0.02)"><div><strong>${p.title}</strong><div class="muted">${p.category} • ${currency(p.price)} • margem ${(p.margin*100|0)}%</div></div><div><button onclick="editProduct('${p.id}')">Editar</button><button onclick="deleteProduct('${p.id}')">Excluir</button></div></div>`).join('');
-}
-
-function renderProductForm(editId){
-  const p = editId ? state.products.find(x=>x.id===editId) : {id:'',title:'',category:'moda',price:9.9,margin:0.3,vendor:'forn',type:'fisico'};
-  view.innerHTML = `<h3>${editId?'Editar':'Novo'} produto</h3>
-  <div class="card"><input id="f_title" placeholder="Título" value="${p.title}"/><input id="f_price" placeholder="Preço" style="margin-top:6px" value="${p.price}"/><input id="f_margin" placeholder="Margem (ex 0.3)" style="margin-top:6px" value="${p.margin}"/><input id="f_cat" placeholder="categoria" style="margin-top:6px" value="${p.category}"/><input id="f_vendor" placeholder="vendor" style="margin-top:6px" value="${p.vendor}"/><select id="f_type" style="margin-top:6px"><option value="fisico">Físico</option><option value="digital">Digital</option></select><div style="margin-top:8px"><button onclick="saveProduct('${p.id}')">Salvar</button><button onclick="openAdminPanel()">Cancelar</button></div></div>`;
-  document.getElementById('f_type').value = p.type;
-}
-function saveProduct(id){
-  const title = document.getElementById('f_title').value;
-  const price = parseFloat(document.getElementById('f_price').value) || 9.9;
-  const margin = parseFloat(document.getElementById('f_margin').value) || 0.3;
-  const category = document.getElementById('f_cat').value || 'viral';
-  const vendor = document.getElementById('f_vendor').value || 'forn';
-  const type = document.getElementById('f_type').value;
-  if(id){
-    const ix = state.products.findIndex(p=>p.id===id);
-    if(ix>=0){ state.products[ix] = {...state.products[ix], title, price, margin, category, vendor, type}; }
-  } else {
-    state.products.push({id:'p'+Date.now(), title, price, margin, category, vendor, type, trending:0});
-  }
-  save();
-  openAdminPanel();
-}
-
-function editProduct(id){ renderProductForm(id); }
-function deleteProduct(id){ if(confirm('Excluir produto?')){ state.products = state.products.filter(p=>p.id!==id); save(); renderAdminList(); } }
-
-function changeLogo(){
-  if(!state.user || state.user.role!=='admin'){ alert('Apenas admin'); return; }
-  const url = prompt('Cole o caminho da nova logo (ex: assets/logo.png):','assets/logo.png');
-  if(url){ document.getElementById('logoImg').src = url; alert('Logo atualizada visualmente. Para persistir, atualize o arquivo no repositório.'); }
-}
-
-/* init */
-renderHome();
-renderCartCount();
-</script>
 </body>
 </html>
